@@ -1,1 +1,8 @@
 $ gcc LEDexample.c -I/opt/picoscope/include -L/opt/picoscope/lib -lusbdrdaq -o LEDexample
+
+pi@raspberrypi:~/git/ras-pi-temperature-pH $ ldd LEDexample
+	linux-vdso.so.1 (0x7ef26000)
+	/usr/lib/arm-linux-gnueabihf/libarmmem-${PLATFORM}.so => /usr/lib/arm-linux-gnueabihf/libarmmem-v7l.so (0x76f24000)
+	libusbdrdaq.so.2 => not found
+	libc.so.6 => /lib/arm-linux-gnueabihf/libc.so.6 (0x76dbf000)
+	/lib/ld-linux-armhf.so.3 (0x76f39000)
