@@ -7,7 +7,6 @@
 #include <libusbdrdaq/usbDrDaqApi.h>
 #ifndef PICO_STATUS
 #include <libusbdrdaq/PicoStatus.h>
-
 #endif
 
 // device handle
@@ -21,6 +20,7 @@ int main(int arvc, char *argv[]) {
     //    デバイスオープン
 
     printf("Opening the device...\n");
+    printf("%d\n", handle);
     status = UsbDrDaqOpenUnit(&handle);
     if (status != PICO_OK) {
         printf("Unable to open Dr.DAQ device\n");
@@ -57,7 +57,7 @@ int main(int arvc, char *argv[]) {
     printf("Done.\n");
 
     //    RGBLED disable
-    UsbDrDaqSetRGBLED(handle, (int16_t) 0);
+    UsbDrDaqEnableRGBLED(handle, (int16_t) 0);
 
     //    Close device
     UsbDrDaqCloseUnit(handle);

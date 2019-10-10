@@ -1,0 +1,1 @@
+$ gcc LEDexample.c -I/opt/picoscope/include -L/opt/picoscope/lib -lusbdrdaq -o LEDexample
